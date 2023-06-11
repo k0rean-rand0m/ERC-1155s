@@ -17,7 +17,7 @@ contract ERC20s {
 
     string public name;
     string public symbol;
-    uint8 public immutable decimals;
+    uint8 public constant decimals = 0;
 
     /*//////////////////////////////////////////////////////////////
                               ERC20 STORAGE
@@ -45,7 +45,6 @@ contract ERC20s {
         symbol = _symbol;
         LINKED_ID = _linkedId;
         LINKED_1155S = IERC1155s(msg.sender);
-        decimals = 0;
     }
 
     /*//////////////////////////////////////////////////////////////

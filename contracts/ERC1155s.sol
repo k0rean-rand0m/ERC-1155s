@@ -166,6 +166,7 @@ abstract contract ERC1155s {
     ) internal virtual returns(ERC20s) {
         require(address(idToErc20s[id]) == address(0), "ID_IS_LINKED");
         ERC20s token = new ERC20s(id, name, symbol);
+        idToErc20s[id] = token;
         return token;
     }
 
